@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+# Not pages: Google picked these up from strings in the JS bundle
+# (translation and article-manifest module paths) and reported them as 404s.
+Disallow: /locales/
+Disallow: /manifest.
+Disallow: /&
+
+# Sitemap location
+Sitemap: https://externaldisplayiphone.com/sitemap.xml

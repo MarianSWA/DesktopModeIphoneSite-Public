@@ -1,0 +1,26 @@
+{
+  "name": "Text Editor",
+  "short_name": "Text Editor",
+  "id": "/texteditor/",
+  "start_url": "/texteditor/",
+  "scope": "/texteditor/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f3f3f5",
+  "icons": [
+    { "src": "/texteditor/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/texteditor/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "file_handlers": [
+    {
+      "action": "/texteditor/",
+      "accept": {
+        "text/plain": [".txt", ".log"],
+        "text/markdown": [".md"],
+        "text/csv": [".csv"],
+        "application/json": [".json"]
+      }
+    }
+  ],
+  "launch_handler": { "client_mode": "focus-existing" }
+}
