@@ -1,4 +1,4 @@
-import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-C_HYWTLi.js";const p=`
+import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_euDSrm.js";const p=`
 
   <figure>
     <img src="`+n+`" alt="一部连接显示器的 iPhone，显示器上是带有窗口和程序坞的桌面。" loading="lazy" decoding="async">

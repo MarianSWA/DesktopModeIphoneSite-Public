@@ -1,4 +1,4 @@
-import{i as e,a}from"./dock-closeup-BtNIAn2l.js";import{i as n}from"./index-C_HYWTLi.js";const i=`
+import{i as e,a}from"./dock-closeup-BtNIAn2l.js";import{i as n}from"./index-D_euDSrm.js";const i=`
 
   <figure>
     <img src="`+e+`" alt="Un iPhone conectado a un monitor que muestra un escritorio con ventanas y un dock." loading="lazy" decoding="async">

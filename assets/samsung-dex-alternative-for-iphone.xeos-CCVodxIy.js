@@ -1,4 +1,4 @@
-import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-C_HYWTLi.js";const r=`
+import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_euDSrm.js";const r=`
 
   <figure>
     <img src="`+n+`" alt="모니터에 연결된 아이폰. 모니터에는 창과 독이 있는 데스크톱이 표시되어 있다." loading="lazy" decoding="async">
