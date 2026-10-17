@@ -1,4 +1,4 @@
-import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_euDSrm.js";const p=`
+import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{o as i}from"./index-BKnwnQLf.js";const p=`
 
   <figure>
     <img src="`+n+`" alt="一部连接显示器的 iPhone，显示器上是带有窗口和程序坞的桌面。" loading="lazy" decoding="async">
@@ -66,7 +66,7 @@ import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_eu
     <li><strong>安装常用网站。</strong>把每天使用的网页应用添加到程序坞，让它们像 App 一样在独立窗口中打开。</li>
   </ol>
 
-  <p>如果电视上出现一圈细黑边，那是电视的过扫描造成的，而不是手机。解决方法见关于外接显示器黑边的文章。</p>
+  <p>如果电视上出现一圈细黑边，那是电视的过扫描造成的，而不是手机。解决方法见<a href="/blog/iphone-external-display-black-bars-fix">关于外接显示器黑边的文章</a>。</p>
 
   <h2 id="常见问题">常见问题</h2>
 

@@ -1,4 +1,4 @@
-import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{i as t}from"./index-D_euDSrm.js";const a=`
+import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{o as t}from"./index-BKnwnQLf.js";const a=`
 
   <figure>
     <img src="`+e+`" alt="An iPhone connected to a monitor showing a desktop with windows and a dock." loading="lazy" decoding="async">
@@ -66,7 +66,7 @@ import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{i as t}from"./index
     <li><strong>Install your sites.</strong> Add the web apps you use every day to the dock, so they open as apps in their own windows.</li>
   </ol>
 
-  <p>If the picture shows a thin black frame on a TV, that is the TV's overscan rather than the phone. The fix is in our guide to black bars on an external display.</p>
+  <p>If the picture shows a thin black frame on a TV, that is the TV's overscan rather than the phone. The fix is in <a href="/blog/iphone-external-display-black-bars-fix">our guide to black bars on an external display</a>.</p>
 
   <h2 id="questions-people-ask">Questions people ask</h2>
 

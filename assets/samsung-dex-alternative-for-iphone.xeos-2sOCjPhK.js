@@ -1,4 +1,4 @@
-import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_euDSrm.js";const d=`
+import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{o as i}from"./index-BKnwnQLf.js";const d=`
 
   <figure>
     <img src="`+n+`" alt="モニターにつないだiPhone。モニターにはウインドウとDockのあるデスクトップが表示されている。" loading="lazy" decoding="async">
@@ -66,7 +66,7 @@ import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_eu
     <li><strong>よく使うサイトをインストール。</strong>毎日使うWebアプリをDockに追加すると、専用のウインドウでアプリのように開きます。</li>
   </ol>
 
-  <p>テレビで細い黒い枠が出る場合は、iPhoneではなくテレビのオーバースキャンが原因です。対処法は外部ディスプレイの黒い帯についての記事にあります。</p>
+  <p>テレビで細い黒い枠が出る場合は、iPhoneではなくテレビのオーバースキャンが原因です。対処法は<a href="/blog/iphone-external-display-black-bars-fix">外部ディスプレイの黒い帯についての記事</a>にあります。</p>
 
   <h2 id="よくある質問">よくある質問</h2>
 

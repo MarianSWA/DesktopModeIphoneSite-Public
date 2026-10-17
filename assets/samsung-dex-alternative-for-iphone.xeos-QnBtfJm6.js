@@ -1,4 +1,4 @@
-import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_euDSrm.js";const r=`
+import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{o as i}from"./index-BKnwnQLf.js";const r=`
 
   <figure>
     <img src="`+n+`" alt="모니터에 연결된 아이폰. 모니터에는 창과 독이 있는 데스크톱이 표시되어 있다." loading="lazy" decoding="async">
@@ -66,7 +66,7 @@ import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_eu
     <li><strong>자주 쓰는 사이트 설치.</strong> 매일 쓰는 웹 앱을 독에 추가하면 전용 창에서 앱처럼 열립니다.</li>
   </ol>
 
-  <p>TV에 얇은 검은 테두리가 보인다면 아이폰이 아니라 TV의 오버스캔 때문입니다. 해결 방법은 외부 디스플레이의 검은 띠에 관한 글에 있습니다.</p>
+  <p>TV에 얇은 검은 테두리가 보인다면 아이폰이 아니라 TV의 오버스캔 때문입니다. 해결 방법은 <a href="/blog/iphone-external-display-black-bars-fix">외부 디스플레이의 검은 띠에 관한 글</a>에 있습니다.</p>
 
   <h2 id="자주-묻는-질문">자주 묻는 질문</h2>
 
@@ -84,4 +84,4 @@ import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_eu
     <p>네. 모니터, TV, 프로젝터, 휴대용 모니터, 그리고 XREAL이나 VITURE 같은 AR 글래스까지 지원합니다.</p>
   </div>
 
-`,g=[{id:"짧은-답",text:"짧은 답"},{id:"ios가-미러링만-하는-이유",text:"iOS가 미러링만 하는 이유"},{id:"덱스와-xeos-비교",text:"덱스와 XeOS 비교"},{id:"xeos와-함께하는-하루",text:"XeOS와 함께하는 하루"},{id:"5분이면-설정-끝",text:"5분이면 설정 끝"},{id:"자주-묻는-질문",text:"자주 묻는 질문"}];export{r as html,g as toc};
+`,l=[{id:"짧은-답",text:"짧은 답"},{id:"ios가-미러링만-하는-이유",text:"iOS가 미러링만 하는 이유"},{id:"덱스와-xeos-비교",text:"덱스와 XeOS 비교"},{id:"xeos와-함께하는-하루",text:"XeOS와 함께하는 하루"},{id:"5분이면-설정-끝",text:"5분이면 설정 끝"},{id:"자주-묻는-질문",text:"자주 묻는 질문"}];export{r as html,l as toc};

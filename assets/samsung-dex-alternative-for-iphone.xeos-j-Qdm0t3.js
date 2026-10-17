@@ -1,4 +1,4 @@
-import{i as e,a}from"./dock-closeup-BtNIAn2l.js";import{i as n}from"./index-D_euDSrm.js";const i=`
+import{i as e,a}from"./dock-closeup-BtNIAn2l.js";import{o as n}from"./index-BKnwnQLf.js";const i=`
 
   <figure>
     <img src="`+e+`" alt="Un iPhone conectado a un monitor que muestra un escritorio con ventanas y un dock." loading="lazy" decoding="async">
@@ -66,7 +66,7 @@ import{i as e,a}from"./dock-closeup-BtNIAn2l.js";import{i as n}from"./index-D_eu
     <li><strong>Instala tus sitios.</strong> Añade al dock las apps web que usas a diario para que se abran como apps en sus propias ventanas.</li>
   </ol>
 
-  <p>Si en un televisor ves un fino marco negro, es el sobrebarrido (overscan) del televisor, no el teléfono. La solución está en nuestra guía sobre las barras negras en una pantalla externa.</p>
+  <p>Si en un televisor ves un fino marco negro, es el sobrebarrido (overscan) del televisor, no el teléfono. La solución está en <a href="/blog/iphone-external-display-black-bars-fix">nuestra guía sobre las barras negras en una pantalla externa</a>.</p>
 
   <h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>
 

@@ -1,4 +1,4 @@
-import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{i as t}from"./index-D_euDSrm.js";const i=`
+import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{o as t}from"./index-BKnwnQLf.js";const i=`
 
   <figure>
     <img src="`+e+`" alt="Un iPhone branché à un écran qui affiche un bureau avec des fenêtres et un dock." loading="lazy" decoding="async">
@@ -66,7 +66,7 @@ import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{i as t}from"./index
     <li><strong>Installez vos sites.</strong> Ajoutez au dock les apps web que vous utilisez chaque jour, pour qu'elles s'ouvrent comme des apps dans leurs propres fenêtres.</li>
   </ol>
 
-  <p>Si un téléviseur affiche un fin cadre noir, c'est le surbalayage (overscan) du téléviseur, pas le téléphone. La solution est dans notre article sur les bandes noires sur un écran externe.</p>
+  <p>Si un téléviseur affiche un fin cadre noir, c'est le surbalayage (overscan) du téléviseur, pas le téléphone. La solution est dans <a href="/blog/iphone-external-display-black-bars-fix">notre article sur les bandes noires sur un écran externe</a>.</p>
 
   <h2 id="questions-fréquentes">Questions fréquentes</h2>
 

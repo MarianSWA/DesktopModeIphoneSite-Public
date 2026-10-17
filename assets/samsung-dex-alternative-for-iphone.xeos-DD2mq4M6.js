@@ -1,4 +1,4 @@
-import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_euDSrm.js";const a=`
+import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{o as i}from"./index-BKnwnQLf.js";const r=`
 
   <figure>
     <img src="`+e+`" alt="Ein iPhone an einem Monitor, der einen Desktop mit Fenstern und einem Dock zeigt." loading="lazy" decoding="async">
@@ -66,7 +66,7 @@ import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_eu
     <li><strong>Deine Websites installieren.</strong> Die Web-Apps, die du täglich nutzt, ins Dock legen, damit sie als Apps in eigenen Fenstern öffnen.</li>
   </ol>
 
-  <p>Zeigt ein Fernseher einen dünnen schwarzen Rahmen, liegt das am Overscan des Fernsehers, nicht am Telefon. Die Lösung steht in unserem Artikel über schwarze Balken auf einem externen Bildschirm.</p>
+  <p>Zeigt ein Fernseher einen dünnen schwarzen Rahmen, liegt das am Overscan des Fernsehers, nicht am Telefon. Die Lösung steht in <a href="/blog/iphone-external-display-black-bars-fix">unserem Artikel über schwarze Balken auf einem externen Bildschirm</a>.</p>
 
   <h2 id="häufige-fragen">Häufige Fragen</h2>
 
@@ -84,4 +84,4 @@ import{i as e,a as n}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-D_eu
     <p>Ja: Monitore, Fernseher, Beamer, tragbare Bildschirme und sogar AR-Brillen wie XREAL und VITURE.</p>
   </div>
 
-`,s=[{id:"die-kurze-antwort",text:"Die kurze Antwort"},{id:"warum-ios-stattdessen-spiegelt",text:"Warum iOS stattdessen spiegelt"},{id:"dex-und-xeos-im-vergleich",text:"DeX und XeOS im Vergleich"},{id:"wie-ein-tag-damit-aussieht",text:"Wie ein Tag damit aussieht"},{id:"in-fünf-minuten-eingerichtet",text:"In fünf Minuten eingerichtet"},{id:"häufige-fragen",text:"Häufige Fragen"}];export{a as html,s as toc};
+`,s=[{id:"die-kurze-antwort",text:"Die kurze Antwort"},{id:"warum-ios-stattdessen-spiegelt",text:"Warum iOS stattdessen spiegelt"},{id:"dex-und-xeos-im-vergleich",text:"DeX und XeOS im Vergleich"},{id:"wie-ein-tag-damit-aussieht",text:"Wie ein Tag damit aussieht"},{id:"in-fünf-minuten-eingerichtet",text:"In fünf Minuten eingerichtet"},{id:"häufige-fragen",text:"Häufige Fragen"}];export{r as html,s as toc};

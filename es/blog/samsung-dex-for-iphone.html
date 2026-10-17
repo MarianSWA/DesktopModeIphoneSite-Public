@@ -27,8 +27,63 @@
         if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="/assets/index-D_euDSrm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BiacuPWV.css">
+    <!-- Cookieless Google Analytics, as on externaldisplayiphone.com: GA always measures but
+         never stores anything on the device. gtag stops sending when its _ga cookies don't
+         stick (GA4 ignores client_storage: 'none'), so they live in an in-memory jar: GA sees
+         working cookies, the browser stores none, and no consent banner is needed. Only on
+         the live domain, so the dev server and the prerender never send hits. -->
+    <script>
+      (function () {
+        if (location.hostname !== "desktopmodeiphone.com") return;
+        try {
+          var nativeCookie = Object.getOwnPropertyDescriptor(Document.prototype, "cookie");
+          var jar = {};
+          Object.defineProperty(document, "cookie", {
+            configurable: true,
+            get: function () {
+              var real = nativeCookie.get.call(document);
+              var mem = Object.keys(jar).map(function (k) { return k + "=" + jar[k]; }).join("; ");
+              return real && mem ? real + "; " + mem : real || mem;
+            },
+            set: function (v) {
+              var m = /^\s*(_ga[^=]*|_gid|_gat[^=]*)=([^;]*)/.exec(v);
+              if (!m) return nativeCookie.set.call(document, v);
+              if (/max-age=0|expires=thu, 01 jan 1970/i.test(v)) delete jar[m[1]];
+              else jar[m[1]] = m[2];
+            }
+          });
+        } catch (e) {}
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag("consent", "default", {
+          analytics_storage: "granted",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          functionality_storage: "denied",
+          personalization_storage: "denied"
+        });
+        gtag("set", "ads_data_redaction", true);
+        gtag("js", new Date());
+        gtag("config", "G-EQ721QEV4M", { allow_google_signals: false, allow_ad_personalization_signals: false });
+        // gtag.js is ~170 KiB and not needed for first paint: load it once the page is idle.
+        // The dataLayer stub above queues every call until it arrives, so nothing is lost.
+        function load() {
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-EQ721QEV4M";
+          document.head.appendChild(s);
+        }
+        function schedule() {
+          if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 3000 });
+          else setTimeout(load, 1500);
+        }
+        if (document.readyState === "complete") schedule();
+        else window.addEventListener("load", schedule, { once: true });
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BKnwnQLf.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BQWy_7LR.css">
       <link rel="alternate" hreflang="en" href="https://desktopmodeiphone.com/blog/samsung-dex-for-iphone" />
     <link rel="alternate" hreflang="ko" href="https://desktopmodeiphone.com/ko/blog/samsung-dex-for-iphone" />
     <link rel="alternate" hreflang="zh" href="https://desktopmodeiphone.com/zh/blog/samsung-dex-for-iphone" />
@@ -39,6 +94,92 @@
     <link rel="alternate" hreflang="x-default" href="https://desktopmodeiphone.com/blog/samsung-dex-for-iphone" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><header class="sticky top-0 z-50"><div class="mx-auto w-full max-w-6xl px-4 py-3 sm:px-6"><nav class="flex h-fit w-full items-center justify-between gap-4 transition-all duration-500 border-transparent bg-transparent"><a href="/" aria-label="XeOS home"><span class="flex items-center gap-2"><img alt="" width="32" height="32" class="size-8 rounded-icon" src="data:image/webp;base64,UklGRqQDAABXRUJQVlA4IJgDAACQEgCdASpAAEAAPkkei0QioaEZ/M4AKASEtABVR6X+V+G82OuP3vGU61Xqtzif6j/tj72PoQ3kD0AP1m9Mz9mfhg8m7BUzFm/Cth8yry/xP/+RltDAk1KSQKVSep9X5+7mWKcNBRYqU5Hj6LOewLt/9A4zNqFa8Dxwkq1FqZdZQg2fB/3j83iC1JEoJNbtn7BhLPxeu0uacmayrAgAAP7hg7GrKV4Q97esanXNn8D57xmj7qYRx7evkCpIIJ7GUjnj6dr//qEBfgYc5+yTLwP9hg3xcoLIb2qlNzYV7rZrLWPHuyDGH3rpZhvL0PRYHRb9C2C3jofXQ1SZ7tW+yCdk/bJXNsCxZ06L9UtU+PVbQ0Ql5AiP37XZ0PzB9Mz5/HiBi6z7Yvuupn8KLQ8OiUwtEyJiboxITcHFxPbyEMndn+sD3v/ICU5lCPGIMtjfsjI0PIpZciA8E5eNVoecyzUMKFspr/yNP0j6o98uG09/C+/d380Vcn7rh+vMm6G3eu7wgWeSTaTHRm61l9D1JDKlwEUV5P5c0E73vG0WsByWzznoDX/wH7AamhKq8kWX/rX2p2eVW/2R13hTg8guqRjY+nWbKP9XvrUoLSGuUDQ/7TSOo+kvkPxw7SM45uk3M1AE4NF/+dxZEHt03YPD3/5Vzz6A2F+pZGvT4umBXxZKBxDznTe3Txiq0A9m++v/14eoNQc7Z9OHKQYfIWfD+r3AJvOIuLM/T22kwMshislqui+HokIyPDI6W1esjWZBHCGOxHYbteJv6MHCK5Rs5f6ygFD8AjwQh8Vd1UCy5e8dfuJBCDVL9PFG/aQvqZ9TNJqFuZQ0k651/A2UcYG5eFMiivxEUt3/clnGyMRhPIPYi1ibSKoPFHSSTKusoi4HnNxzuljYkLHbaoWBryTn7KVn833tL4LSRqAuLvdIw+aaV7buLF6BHy5jUo+5RKcqFoaqRJ7Zr6bXToD1j+9JQXvQwH1eoyZdH2JgFGjyGQxzDUnZx04wi7q60u0qH5w62ZsnCYQeljPRPhM2R2n30hwFvrXAIQZKPPnxqEnuC3NzUhbum7rBTsQAO4HB1SQstj6Pm0mcC24F+ztHKU3i8R0/s4hTgvX8stbxVxg1grTAxC0BKdVjuvD3E8S8ffapRjKEusuAGraeiJ9dwg0FUWBl5x5mJU+WOrne2DHpN7nTtUcTuhgk2XL2/N1qd0hrU9NmRkIYwKrgAA=="><span class="text-lg font-semibold tracking-tight">XeOS</span></span></a><nav data-slot="navigation-menu" class="group/navigation-menu relative flex max-w-max flex-1 items-center justify-center max-lg:hidden"><ul data-slot="navigation-menu-list" class="group flex-1 list-none items-center justify-center flex gap-0"><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#features" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Features</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#reviews" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Reviews</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#faq" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">FAQ</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#compare" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Compare</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/blog" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Blog</a></li></ul></nav><div class="flex items-center gap-2"><button type="button" tabindex="0" data-slot="button" aria-label="Switch to light mode" title="Switch to light mode" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun size-5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><a href="https://apps.apple.com/us/app/external-display-browser/id6758286241" target="_blank" rel="noopener" role="button" tabindex="0" data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/80 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 rounded-full max-sm:hidden"><svg viewBox="0 0 384 512" aria-hidden="true" class="size-4" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg> Download</a><button type="button" tabindex="0" aria-haspopup="menu" aria-expanded="false" id="base-ui-_r_9_" data-slot="dropdown-menu-trigger" class="flex cursor-pointer items-center justify-center rounded-full border border-border bg-background p-2 lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify lucide-align-justify size-5" aria-hidden="true"><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"></path></svg><span class="sr-only">Menu</span></button></div></nav></div></header><main class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12"><div class="flex items-center justify-between gap-4"><a href="/es/blog" class="flex w-fit items-center gap-2 text-sm text-muted-foreground hover:text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left size-4" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> All articles</a><button type="button" tabindex="0" data-slot="dropdown-menu-trigger" aria-haspopup="menu" aria-expanded="false" id="base-ui-_r_e_" class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-7 gap-1 px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages size-4" aria-hidden="true"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>Español</button></div><header class="flex max-w-3xl flex-col gap-4"><h1 class="text-4xl font-semibold tracking-tight text-balance md:text-5xl">Samsung DeX para iPhone: lo que de verdad existe en 2026</h1><p class="text-xl text-pretty text-muted-foreground">Quien conecta un Galaxy a un monitor obtiene un escritorio. Quien conecta un iPhone obtiene la pantalla del móvil, ampliada, con barras negras a cada lado. Apple nunca ha lanzado su propia versión de DeX, pero hoy ya se puede recorrer casi todo el camino. Aquí verás qué es posible, qué no y cómo configurarlo.</p><p class="text-sm text-muted-foreground"><time datetime="2026-10-17">17 de octubre de 2026 · </time>4 min read</p></header><div class="grid gap-12 lg:grid-cols-[1fr_16rem]"><article class="article-body min-w-0">
+
+  <figure>
+    <img src="/assets/duo-dex-alternative-hero-CfT3fuFj.webp" alt="Un iPhone conectado a un monitor que muestra un escritorio con ventanas y un dock." loading="lazy" decoding="async">
+    <figcaption>Un escritorio con ventanas y dock, controlado desde un iPhone.</figcaption>
+  </figure>
+
+  <h2 id="la-respuesta-corta">La respuesta corta</h2>
+
+  <p>iOS no tiene modo escritorio. Si conectas cualquier iPhone a una pantalla, el sistema duplica el móvil: una sola app, en vertical y solo táctil. Ningún ajuste lo cambia, en ningún modelo.</p>
+
+  <p>Lo que sí puedes hacer es usar una app que dibuje su propio escritorio en la pantalla externa. Eso es exactamente lo que hace <strong>XeOS</strong>. Muestra un entorno completo a la resolución nativa de la pantalla, con ventanas redimensionables, un dock, un gestor de archivos y un navegador de escritorio, y el iPhone se convierte en el trackpad. Es lo más parecido a DeX que puede usar un iPhone.</p>
+
+  <h2 id="por-qué-ios-duplica-la-pantalla">Por qué iOS duplica la pantalla</h2>
+
+  <p>Cuando iOS envía imagen a un monitor, envía la misma imagen que muestra el teléfono. La pantalla del iPhone es alta y estrecha, unos 19,5:9, mientras que monitores y televisores son 16:9, así que la imagen se escala a la altura y el resto queda en negro. Las apps normales no pueden pedir un diseño horizontal propio para la segunda pantalla, por eso Safari, Mail y todo lo demás se ven igual en un monitor de 27 pulgadas que en la mano.</p>
+
+  <p>Sin embargo, una app sí puede dibujar algo totalmente distinto en una pantalla externa. Casi ninguna lo hace, porque obliga a construir cada parte de la interfaz desde cero. XeOS está hecho entero en torno a eso.</p>
+
+  <h2 id="dex-y-xeos-punto-por-punto">DeX y XeOS, punto por punto</h2>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Lo que quieres</th><th>Samsung DeX</th><th>XeOS en iPhone y iPad</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Toda la pantalla aprovechada, sin barras negras</td><td>Sí</td><td>Sí</td></tr>
+        <tr><td>Ventanas que puedes mover, redimensionar y apilar</td><td>Sí</td><td>Sí</td></tr>
+        <tr><td>Ratón, teclado y atajos</td><td>Sí</td><td>Sí, y además el iPhone como trackpad o Air Mouse</td></tr>
+        <tr><td>Un navegador de escritorio completo</td><td>Sí</td><td>Sí, con bloqueador de anuncios integrado</td></tr>
+        <tr><td>Archivos, también en unidades USB</td><td>Sí</td><td>Sí: iCloud Drive, archivos del iPhone y discos externos</td></tr>
+        <tr><td>Tus apps del móvil en ventanas</td><td>Sí</td><td>No: iOS no permite que una app ejecute otra</td></tr>
+        <tr><td>Funciona en iPhone</td><td>No</td><td>Sí, y en iPhone Duo y cualquier iPad</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>La diferencia real está en la sexta fila. DeX forma parte del propio Android, así que cualquier app de Android puede abrirse en una ventana. En iOS ninguna app puede ejecutar otra dentro. XeOS lo compensa con sus propias apps y con toda la web: Google Docs y Hojas de cálculo, Office en la web, Gmail, YouTube, Netflix y casi todo lo que abrirías en un portátil sobre la mesa. Cualquiera de esos sitios se puede instalar en el dock y abrirse en su propia ventana, como una app.</p>
+
+  <figure>
+    <img src="/assets/dock-closeup-C_898EZc.webp" alt="El dock de XeOS con apps integradas y sitios web instalados." loading="lazy" decoding="async">
+    <figcaption>Apps integradas y sitios web instalados, uno al lado del otro en el dock.</figcaption>
+  </figure>
+
+  <h2 id="cómo-es-un-día-con-él">Cómo es un día con él</h2>
+
+  <ul>
+    <li><strong>Trabajo:</strong> un documento en una ventana, el correo en otra y una hoja de cálculo detrás. Cambias con el dock o con Control + Tab.</li>
+    <li><strong>Archivos:</strong> abre un PDF de iCloud Drive, anótalo, fírmalo y guarda una copia en un pendrive.</li>
+    <li><strong>Tiempo libre:</strong> YouTube o una plataforma de streaming a pantalla completa en el televisor, o juegos en la nube con un mando.</li>
+    <li><strong>Buscar:</strong> Control + Espacio abre la búsqueda inteligente de apps, archivos, eventos del calendario y el historial del portapapeles.</li>
+  </ul>
+
+  <figure>
+    <img src="/assets/spotlight-search-Z9O977eE.webp" alt="La búsqueda inteligente abierta sobre el escritorio de XeOS, con apps, una búsqueda web y archivos." loading="lazy" decoding="async">
+    <figcaption>La búsqueda inteligente encuentra apps, archivos, eventos y lo que has copiado.</figcaption>
+  </figure>
+
+  <h2 id="configurado-en-cinco-minutos">Configurado en cinco minutos</h2>
+
+  <ol>
+    <li><strong>Conecta la pantalla.</strong> En iPhone 15 y posteriores, un adaptador de USB-C a HDMI o un cable USB-C directo a un monitor USB-C. En iPhone 14 y anteriores, el adaptador Lightning a AV digital de Apple. También funciona AirPlay a un Apple TV o a un televisor con AirPlay, sin cable.</li>
+    <li><strong>Abre XeOS.</strong> Detecta la pantalla y coloca su escritorio en ella, en horizontal y a la resolución del panel.</li>
+    <li><strong>Elige cómo controlarlo.</strong> Vincula un ratón y un teclado Bluetooth en los Ajustes de iOS, o usa la pantalla del móvil como trackpad.</li>
+    <li><strong>Instala tus sitios.</strong> Añade al dock las apps web que usas a diario para que se abran como apps en sus propias ventanas.</li>
+  </ol>
+
+  <p>Si en un televisor ves un fino marco negro, es el sobrebarrido (overscan) del televisor, no el teléfono. La solución está en <a href="/blog/iphone-external-display-black-bars-fix">nuestra guía sobre las barras negras en una pantalla externa</a>.</p>
+
+  <h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>
+
+  <div class="faq">
+    <h3>¿Añadirá Apple un modo escritorio tipo DeX a iOS?</h3>
+    <p>De momento no. iOS 26 e iOS 27 cambiaron muchas cosas, pero un iPhone conectado a un monitor sigue duplicando su pantalla. Split View solo llegó al iPhone Duo, y solo en sus propias pantallas.</p>
+
+    <h3>¿Qué iPhone funcionan?</h3>
+    <p>Cualquier iPhone que pueda sacar vídeo, desde los modelos Lightning hasta los más nuevos con USB-C, además del iPhone Duo y cualquier iPad, incluidos los que no tienen Stage Manager.</p>
+
+    <h3>¿Necesito un ratón?</h3>
+    <p>No. La pantalla del iPhone funciona como trackpad, y también puedes mover el iPhone en el aire para mover el puntero. Con un ratón Bluetooth es cuando más se parece a un ordenador.</p>
+
+    <h3>¿Se puede usar en un televisor?</h3>
+    <p>Sí: monitores, televisores, proyectores, pantallas portátiles e incluso gafas AR como XREAL y VITURE.</p>
+  </div>
+
+</article><nav aria-label="On this page" class="max-lg:hidden"><div class="sticky top-28 flex flex-col gap-3 border-l border-border pl-4"><span class="text-sm font-medium">On this page</span><a href="#la-respuesta-corta" class="text-sm text-muted-foreground hover:text-foreground">La respuesta corta</a><a href="#por-qué-ios-duplica-la-pantalla" class="text-sm text-muted-foreground hover:text-foreground">Por qué iOS duplica la pantalla</a><a href="#dex-y-xeos-punto-por-punto" class="text-sm text-muted-foreground hover:text-foreground">DeX y XeOS, punto por punto</a><a href="#cómo-es-un-día-con-él" class="text-sm text-muted-foreground hover:text-foreground">Cómo es un día con él</a><a href="#configurado-en-cinco-minutos" class="text-sm text-muted-foreground hover:text-foreground">Configurado en cinco minutos</a><a href="#preguntas-frecuentes" class="text-sm text-muted-foreground hover:text-foreground">Preguntas frecuentes</a></div></nav></div></main><footer class="border-t border-border"><div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-14"><div class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"><span class="flex items-center gap-2"><img alt="" width="32" height="32" class="size-8 rounded-icon" src="data:image/webp;base64,UklGRqQDAABXRUJQVlA4IJgDAACQEgCdASpAAEAAPkkei0QioaEZ/M4AKASEtABVR6X+V+G82OuP3vGU61Xqtzif6j/tj72PoQ3kD0AP1m9Mz9mfhg8m7BUzFm/Cth8yry/xP/+RltDAk1KSQKVSep9X5+7mWKcNBRYqU5Hj6LOewLt/9A4zNqFa8Dxwkq1FqZdZQg2fB/3j83iC1JEoJNbtn7BhLPxeu0uacmayrAgAAP7hg7GrKV4Q97esanXNn8D57xmj7qYRx7evkCpIIJ7GUjnj6dr//qEBfgYc5+yTLwP9hg3xcoLIb2qlNzYV7rZrLWPHuyDGH3rpZhvL0PRYHRb9C2C3jofXQ1SZ7tW+yCdk/bJXNsCxZ06L9UtU+PVbQ0Ql5AiP37XZ0PzB9Mz5/HiBi6z7Yvuupn8KLQ8OiUwtEyJiboxITcHFxPbyEMndn+sD3v/ICU5lCPGIMtjfsjI0PIpZciA8E5eNVoecyzUMKFspr/yNP0j6o98uG09/C+/d380Vcn7rh+vMm6G3eu7wgWeSTaTHRm61l9D1JDKlwEUV5P5c0E73vG0WsByWzznoDX/wH7AamhKq8kWX/rX2p2eVW/2R13hTg8guqRjY+nWbKP9XvrUoLSGuUDQ/7TSOo+kvkPxw7SM45uk3M1AE4NF/+dxZEHt03YPD3/5Vzz6A2F+pZGvT4umBXxZKBxDznTe3Txiq0A9m++v/14eoNQc7Z9OHKQYfIWfD+r3AJvOIuLM/T22kwMshislqui+HokIyPDI6W1esjWZBHCGOxHYbteJv6MHCK5Rs5f6ygFD8AjwQh8Vd1UCy5e8dfuJBCDVL9PFG/aQvqZ9TNJqFuZQ0k651/A2UcYG5eFMiivxEUt3/clnGyMRhPIPYi1ibSKoPFHSSTKusoi4HnNxzuljYkLHbaoWBryTn7KVn833tL4LSRqAuLvdIw+aaV7buLF6BHy5jUo+5RKcqFoaqRJ7Zr6bXToD1j+9JQXvQwH1eoyZdH2JgFGjyGQxzDUnZx04wi7q60u0qH5w62ZsnCYQeljPRPhM2R2n30hwFvrXAIQZKPPnxqEnuC3NzUhbum7rBTsQAO4HB1SQstj6Pm0mcC24F+ztHKU3i8R0/s4hTgvX8stbxVxg1grTAxC0BKdVjuvD3E8S8ffapRjKEusuAGraeiJ9dwg0FUWBl5x5mJU+WOrne2DHpN7nTtUcTuhgk2XL2/N1qd0hrU9NmRkIYwKrgAA=="><span class="text-lg font-semibold tracking-tight">XeOS</span></span><nav class="flex flex-wrap items-center gap-x-8 gap-y-3"><a href="/#features" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Features</a><a href="/#reviews" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Reviews</a><a href="/#faq" class="text-sm text-muted-foreground transition-colors hover:text-foreground">FAQ</a><a href="/blog" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Blog</a><a href="/privacy" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Privacy</a><a href="/terms" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Terms</a><a href="/contact" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Contact</a></nav></div><div data-orientation="horizontal" role="separator" aria-orientation="horizontal" data-slot="separator" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div><p class="text-sm text-muted-foreground">© 2026 XeOS. All rights reserved.</p></div></footer></div>
   </body>
 </html>

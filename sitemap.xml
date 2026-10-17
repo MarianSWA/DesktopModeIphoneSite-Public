@@ -5,7 +5,16 @@
   </url>
   <url>
     <loc>https://desktopmodeiphone.com/blog</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://desktopmodeiphone.com/privacy</loc>
+  </url>
+  <url>
+    <loc>https://desktopmodeiphone.com/terms</loc>
+  </url>
+  <url>
+    <loc>https://desktopmodeiphone.com/contact</loc>
   </url>
   <url>
     <loc>https://desktopmodeiphone.com/blog/samsung-dex-for-iphone</loc>
@@ -90,5 +99,9 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://desktopmodeiphone.com/fr/blog/samsung-dex-for-iphone"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://desktopmodeiphone.com/ja/blog/samsung-dex-for-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://desktopmodeiphone.com/blog/samsung-dex-for-iphone"/>
+  </url>
+  <url>
+    <loc>https://desktopmodeiphone.com/blog/iphone-external-display-black-bars-fix</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
 </urlset>
