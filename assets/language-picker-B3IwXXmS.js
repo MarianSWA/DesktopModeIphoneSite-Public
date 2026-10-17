@@ -1,5 +1,5 @@
 const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/samsung-dex-alternative-for-iphone.xeos-BAfQl1XQ.js","assets/spotlight-search-hdQ6mT9d.js","assets/samsung-dex-alternative-for-iphone.xeos-BHbMze-L.js","assets/samsung-dex-alternative-for-iphone.xeos-cg0-GE3z.js","assets/samsung-dex-alternative-for-iphone.xeos-DVFmVmzz.js","assets/samsung-dex-alternative-for-iphone.xeos-CdGHC0kv.js","assets/samsung-dex-alternative-for-iphone.xeos-J5tx9lrI.js","assets/samsung-dex-alternative-for-iphone.xeos-B5ZHcKnj.js"])))=>i.map(i=>d[i]);
-import{b as d,_ as r,d as u,m as l,e as h,f as c,j as t,D as p,g,B as m,h as v,i as b,k as f}from"./index-DGD8qpb4.js";/**
+import{b as d,_ as r,d as u,m as l,e as h,f as c,j as t,D as p,g,B as m,h as v,i as b,k as f}from"./index-Czqb8Oi8.js";/**
  * @license lucide-react v1.59.0 - ISC
  *
  * This source code is licensed under the ISC license.
