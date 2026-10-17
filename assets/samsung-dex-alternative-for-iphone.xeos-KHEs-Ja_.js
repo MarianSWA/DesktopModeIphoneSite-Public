@@ -1,4 +1,4 @@
-import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-LS9T9l6p.js";const d=`
+import{i as n,a as t}from"./dock-closeup-BtNIAn2l.js";import{i}from"./index-C_HYWTLi.js";const d=`
 
   <figure>
     <img src="`+n+`" alt="モニターにつないだiPhone。モニターにはウインドウとDockのあるデスクトップが表示されている。" loading="lazy" decoding="async">
