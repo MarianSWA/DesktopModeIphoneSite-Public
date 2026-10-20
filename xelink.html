@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Show XeOS in this browser · XeOS</title>
+<meta name="description" content="Then type the address XeOS shows, or open the link it shared.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://desktopmodeiphone.com/xelink">
+<style>
+:root { --bg:#f4f5f8; --card:#fff; --text:#15171c; --dim:#5b6070; --border:rgba(15,20,40,.12); --accent:hsl(245 90% 62%); --accent2:hsl(245 90% 52%); --field:#f7f8fb; --danger:#e5484d; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0d0f14; --card:#17191f; --text:#eceef3; --dim:#9aa1b2; --border:rgba(255,255,255,.1); --field:#1f2128; color-scheme: dark; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font: 15px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+body { display: flex; align-items: center; justify-content: center; padding: 32px 16px; min-height: 100vh;
+  background: radial-gradient(900px 500px at 15% -10%, hsl(245 90% 62% / .18), transparent 60%), radial-gradient(800px 500px at 110% 110%, hsl(20 90% 62% / .14), transparent 60%), var(--bg); }
+main { width: min(520px, 100%); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 28px 24px 24px; box-shadow: 0 24px 60px -24px rgba(0,0,0,.35); }
+.logo { width: 56px; height: 56px; margin-bottom: 14px; }
+h1 { font-size: 24px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -.01em; }
+p { margin: 0; color: var(--dim); }
+form { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; }
+label { font-size: 12px; font-weight: 600; color: var(--dim); text-transform: uppercase; letter-spacing: .04em; }
+.row { display: flex; gap: 8px; }
+input { flex: 1; min-width: 0; font: inherit; font-size: 17px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--field); color: var(--text); font-variant-numeric: tabular-nums; }
+input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px hsl(245 90% 62% / .2); }
+button { font: inherit; font-weight: 600; border: 0; border-radius: 12px; padding: 12px 18px; color: #fff; background: linear-gradient(var(--accent), var(--accent2)); cursor: pointer; white-space: nowrap; }
+button:hover { filter: brightness(1.06); }
+.err { color: var(--danger); font-size: 13px; min-height: 0; }
+.err:empty { display: none; }
+.recent { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.recent[hidden] { display: none; }
+.recent span { font-size: 12px; color: var(--dim); margin-right: 4px; }
+.recent a { font-size: 13px; padding: 5px 10px; border-radius: 999px; background: var(--field); border: 1px solid var(--border); color: var(--text); text-decoration: none; font-variant-numeric: tabular-nums; }
+.steps { list-style: none; margin: 16px 0 18px; padding: 0; display: flex; flex-direction: column; gap: 10px; counter-reset: s; }
+.steps li { display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; line-height: 1.45; color: var(--text); counter-increment: s; }
+.steps .n { flex: 0 0 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #fff; background: linear-gradient(var(--accent), var(--accent2)); }
+.steps .n::before { content: counter(s); }
+.note { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: var(--field); border: 1px solid var(--border); font-size: 13.5px; }
+.note b { display: block; color: var(--text); margin-bottom: 2px; }
+.links { display: flex; flex-direction: column; gap: 6px; margin-top: 18px; font-size: 14px; text-align: center; }
+.links a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#786bff"/><stop offset="1" stop-color="#3829f0"/></linearGradient></defs><rect x="4" y="4" width="56" height="56" rx="12.6" fill="url(#g)"/><rect x="4.5" y="4.5" width="55" height="55" rx="12.2" fill="none" stroke="#fff" stroke-opacity=".28"/><rect x="21.9" y="18" width="28" height="19" rx="2.5" fill="#fff" fill-opacity=".55"/><rect x="12.4" y="26.4" width="31.4" height="22.4" rx="3.4" fill="#4d3df7"/><rect x="14.1" y="28.1" width="28" height="19" rx="2.5" fill="#fff" fill-opacity=".97"/><rect x="17.4" y="35.4" width="11.2" height="8.4" rx="1.1" fill="#5447f5" fill-opacity=".85"/></svg>
+    <h1 data-t="title">Show XeOS in this browser</h1>
+    <ol class="steps" id="steps"><li><span class="n"></span><span>In XeOS, open Screen Sharing.</span></li><li><span class="n"></span><span>Click Mirror XeOS on Another Device and turn on Mirror XeOS.</span></li><li><span class="n"></span><span>Share or copy the link, then open it in any browser on the same network.</span></li></ol>
+    <p data-t="lead">Then type the address XeOS shows, or open the link it shared.</p>
+    <form id="f" novalidate>
+      <label for="addr" data-t="label">Address</label>
+      <div class="row">
+        <input id="addr" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://192.168.1.23" required>
+        <button type="submit" data-t="connect">Open XeOS</button>
+      </div>
+      <div class="err" id="err" role="alert"></div>
+    </form>
+    <div class="recent" id="recent" hidden><span data-t="recent">Recent</span></div>
+    <div class="note"><b data-t="certTitle">The first time</b><span data-t="cert">Your browser warns about the device's certificate: XeOS makes its own, so no one else has it. Choose Show Details › visit this website (Safari), or Advanced › Proceed (Chrome, Edge), then pair with the 8‑digit code XeOS shows.</span></div>
+  </div>
+  <div class="links">
+    <a href="/downloads/XeLink-mac.zip" data-t="download">Mirror a Mac instead? Download XeLink for Mac</a>
+    <a href="https://desktopmodeiphone.com/" data-t="back">Back to the home page</a>
+  </div>
+</main>
+<script>
+(function () {
+  var S = {"de":{"title":"XeOS in diesem Browser zeigen","lead":"Gib dann die Adresse ein, die XeOS zeigt, oder öffne den geteilten Link.","label":"Adresse","connect":"XeOS öffnen","recent":"Zuletzt","certTitle":"Beim ersten Mal","cert":"Dein Browser warnt vor dem Zertifikat des Geräts: XeOS erstellt sein eigenes, das sonst niemand hat. Wähle „Details einblenden“ › „Diese Website besuchen“ (Safari) oder „Erweitert“ › „Weiter“ (Chrome, Edge) und kopple dann mit dem 8-stelligen Code, den XeOS zeigt.","invalid":"Das sieht nicht wie eine Adresse aus. Sie sieht so aus: https://192.168.1.23.","back":"Zur Startseite","download":"Lieber einen Mac spiegeln? XeLink für Mac laden","stepsTitle":"So verbindest du dich","steps":["Öffne in XeOS die Bildschirmfreigabe.","Klicke auf „XeOS auf einem anderen Gerät spiegeln“ und schalte „XeOS spiegeln“ ein.","Teile oder kopiere den Link und öffne ihn in einem Browser im selben Netzwerk."]},"en":{"title":"Show XeOS in this browser","lead":"Then type the address XeOS shows, or open the link it shared.","label":"Address","connect":"Open XeOS","recent":"Recent","certTitle":"The first time","cert":"Your browser warns about the device's certificate: XeOS makes its own, so no one else has it. Choose Show Details › visit this website (Safari), or Advanced › Proceed (Chrome, Edge), then pair with the 8‑digit code XeOS shows.","invalid":"That doesn't look like an address. It looks like https://192.168.1.23.","back":"Back to the home page","download":"Mirror a Mac instead? Download XeLink for Mac","stepsTitle":"How to connect","steps":["In XeOS, open Screen Sharing.","Click Mirror XeOS on Another Device and turn on Mirror XeOS.","Share or copy the link, then open it in any browser on the same network."]},"es":{"title":"Mostrar XeOS en este navegador","lead":"Después escribe la dirección que muestra XeOS o abre el enlace que compartió.","label":"Dirección","connect":"Abrir XeOS","recent":"Recientes","certTitle":"La primera vez","cert":"Tu navegador avisa sobre el certificado del dispositivo: XeOS crea el suyo propio, así que nadie más lo tiene. Elige Mostrar detalles › visitar este sitio web (Safari) o Avanzado › Continuar (Chrome, Edge) y enlaza con el código de 8 dígitos que muestra XeOS.","invalid":"Eso no parece una dirección. Se parece a https://192.168.1.23.","back":"Volver a la página de inicio","download":"¿Prefieres duplicar un Mac? Descarga XeLink para Mac","stepsTitle":"Cómo conectarse","steps":["En XeOS, abre Compartir pantalla.","Haz clic en Duplicar XeOS en otro dispositivo y activa Duplicar XeOS.","Comparte o copia el enlace y ábrelo en cualquier navegador de la misma red."]},"fr":{"title":"Afficher XeOS dans ce navigateur","lead":"Saisissez ensuite l’adresse affichée par XeOS, ou ouvrez le lien partagé.","label":"Adresse","connect":"Ouvrir XeOS","recent":"Récents","certTitle":"La première fois","cert":"Votre navigateur avertit au sujet du certificat de l’appareil : XeOS crée le sien, que personne d’autre ne possède. Choisissez Afficher les détails › consulter ce site web (Safari), ou Paramètres avancés › Continuer (Chrome, Edge), puis jumelez avec le code à 8 chiffres affiché par XeOS.","invalid":"Cela ne ressemble pas à une adresse. Elle ressemble à https://192.168.1.23.","back":"Retour à l’accueil","download":"Plutôt afficher un Mac ? Téléchargez XeLink pour Mac","stepsTitle":"Comment se connecter","steps":["Dans XeOS, ouvrez Partage d’écran.","Cliquez sur Recopier XeOS sur un autre appareil et activez Recopier XeOS.","Partagez ou copiez le lien, puis ouvrez-le dans un navigateur du même réseau."]},"ja":{"title":"このブラウザにXeOSを表示","lead":"XeOSに表示されたアドレスを入力するか、共有されたリンクを開いてください。","label":"アドレス","connect":"XeOSを開く","recent":"最近","certTitle":"初回のみ","cert":"ブラウザがデバイスの証明書について警告します。XeOSは自分専用の証明書を作成するため、ほかの誰も持っていません。「詳細を表示」›「このWebサイトを閲覧」(Safari) または「詳細設定」›「続行」(Chrome、Edge) を選び、XeOSに表示される8桁のコードでペアリングしてください。","invalid":"アドレスの形式ではないようです。https://192.168.1.23 のような形式です。","back":"ホームページに戻る","download":"Macを表示したい場合は、XeLink for Macをダウンロード","stepsTitle":"接続方法","steps":["XeOSで画面共有を開きます。","「XeOSをほかのデバイスにミラーリング」をクリックして、「XeOSをミラーリング」をオンにします。","リンクを共有またはコピーして、同じネットワーク上のブラウザで開きます。"]},"ko":{"title":"이 브라우저에서 XeOS 보기","lead":"그런 다음 XeOS에 표시된 주소를 입력하거나 공유된 링크를 여십시오.","label":"주소","connect":"XeOS 열기","recent":"최근","certTitle":"처음 한 번","cert":"브라우저가 기기의 인증서에 대해 경고합니다. XeOS는 자체 인증서를 만들기 때문에 다른 누구도 갖고 있지 않습니다. 세부사항 보기 › 이 웹 사이트 방문(Safari) 또는 고급 › 계속(Chrome, Edge)을 선택한 다음 XeOS에 표시되는 8자리 코드로 페어링하십시오.","invalid":"주소 형식이 아닌 것 같습니다. https://192.168.1.23 같은 형식입니다.","back":"홈페이지로 돌아가기","download":"Mac을 미러링하려면 Mac용 XeLink를 다운로드하십시오","stepsTitle":"연결 방법","steps":["XeOS에서 화면 공유를 여십시오.","다른 기기에서 XeOS 미러링을 클릭하고 XeOS 미러링을 켜십시오.","링크를 공유하거나 복사한 다음 같은 네트워크의 브라우저에서 여십시오."]},"ro":{"title":"Afișează XeOS în acest browser","lead":"Apoi introdu adresa afișată de XeOS sau deschide linkul partajat.","label":"Adresă","connect":"Deschide XeOS","recent":"Recente","certTitle":"Prima dată","cert":"Browserul te avertizează despre certificatul dispozitivului: XeOS își creează propriul certificat, pe care nu-l mai are nimeni. Alege Afișează detaliile › vizitează acest site (Safari) sau Avansate › Continuă (Chrome, Edge), apoi asociază cu codul de 8 cifre afișat de XeOS.","invalid":"Nu pare o adresă. Arată așa: https://192.168.1.23.","back":"Înapoi la pagina principală","download":"Vrei să oglindești un Mac? Descarcă XeLink pentru Mac","stepsTitle":"Cum te conectezi","steps":["În XeOS, deschide Partajarea ecranului.","Dă clic pe Oglindește XeOS pe alt dispozitiv și activează Oglindește XeOS.","Partajează sau copiază linkul, apoi deschide-l în orice browser din aceeași rețea."]},"zh":{"title":"在此浏览器中显示 XeOS","lead":"然后输入 XeOS 显示的地址，或打开它共享的链接。","label":"地址","connect":"打开 XeOS","recent":"最近","certTitle":"第一次","cert":"浏览器会对设备的证书发出警告：XeOS 会创建自己的证书，其他人都没有。请选择“显示详细信息” › “访问此网站”（Safari），或“高级” › “继续前往”（Chrome、Edge），然后用 XeOS 显示的 8 位代码配对。","invalid":"这看起来不像地址。地址类似 https://192.168.1.23。","back":"返回主页","download":"想镜像 Mac？下载 Mac 版 XeLink","stepsTitle":"如何连接","steps":["在 XeOS 中打开屏幕共享。","点按“在其他设备上镜像 XeOS”，然后打开“镜像 XeOS”。","共享或拷贝链接，然后在同一网络中的任何浏览器里打开。"]}};
+  var lang = (navigator.languages || [navigator.language || "en"]).map(function (l) { return String(l).slice(0, 2).toLowerCase(); }).filter(function (l) { return S[l]; })[0] || "en";
+  var T = S[lang];
+  document.documentElement.lang = lang;
+  document.title = T.title + " · XeOS";
+  [].forEach.call(document.querySelectorAll("[data-t]"), function (n) { if (T[n.dataset.t]) n.textContent = T[n.dataset.t]; });
+  [].forEach.call(document.querySelectorAll("#steps li"), function (li, i) { if (T.steps && T.steps[i]) li.lastChild.textContent = T.steps[i]; });
+
+  var KEY = "xelink.recent";
+  function load() { try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) { return []; } }
+  function save(list) { try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 5))); } catch (e) {} }
+  /** "192.168.1.23", "192.168.1.23:47821", "https://iphone.local:47821/" → "https://host:port/". */
+  function parse(v) {
+    v = String(v || "").trim();
+    if (!v) return null;
+    if (!/^[a-z]+:\/\//i.test(v)) v = "https://" + v;
+    try {
+      var u = new URL(v);
+      if (!u.hostname || /\s/.test(u.hostname)) return null;
+      return "https://" + (u.hostname.indexOf(":") >= 0 ? "[" + u.hostname + "]" : u.hostname) + (u.port ? ":" + u.port : "") + "/";
+    } catch (e) { return null; }
+  }
+  function go(url) {
+    var list = load().filter(function (x) { return x !== url; });
+    list.unshift(url); save(list);
+    location.href = url;
+  }
+  var input = document.getElementById("addr"), err = document.getElementById("err");
+  document.getElementById("f").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var url = parse(input.value);
+    if (!url) { err.textContent = T.invalid; input.focus(); return; }
+    err.textContent = ""; go(url);
+  });
+  var q = new URLSearchParams(location.search).get("host");
+  if (q) input.value = q;
+  var recent = load(), box = document.getElementById("recent");
+  if (recent.length) {
+    box.hidden = false;
+    recent.forEach(function (url) {
+      var a = document.createElement("a"); a.href = url; a.textContent = url.replace(/^https:\/\//, "").replace(/\/$/, "");
+      a.addEventListener("click", function (e) { e.preventDefault(); go(url); });
+      box.appendChild(a);
+    });
+  }
+  input.focus();
+})();
+</script>
+</body>
+</html>
