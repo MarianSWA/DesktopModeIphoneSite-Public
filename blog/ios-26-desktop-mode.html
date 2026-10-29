@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iOS 26 Desktop Mode: Does the iPhone Have One Yet? | XeOS</title>
+    <meta name="description" content="No. iOS 26 did not give the iPhone a desktop mode. Connect it to a monitor and you still get your phone screen, enlarged, between two black bars. Here is what was rumoured, what iOS actually does with an external display today, and how to get a real desktop on the big screen anyway." />
+    <link rel="canonical" href="https://desktopmodeiphone.com/blog/ios-26-desktop-mode" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="XeOS" />
+    <meta property="og:url" content="https://desktopmodeiphone.com/blog/ios-26-desktop-mode" />
+    <meta property="og:title" content="iOS 26 Desktop Mode: Does the iPhone Have One Yet? | XeOS" />
+    <meta property="og:description" content="No. iOS 26 did not give the iPhone a desktop mode. Connect it to a monitor and you still get your phone screen, enlarged, between two black bars. Here is what was rumoured, what iOS actually does with an external display today, and how to get a real desktop on the big screen anyway." />
+    <meta property="og:image" content="https://desktopmodeiphone.com/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-itunes-app" content="app-id=6758286241" />
+    <!-- Apply a theme the visitor picked before the first paint, so there is no flash.
+         No saved choice: the system appearance applies through CSS. -->
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <!-- Cookieless Google Analytics, as on externaldisplayiphone.com: GA always measures but
+         never stores anything on the device. gtag stops sending when its _ga cookies don't
+         stick (GA4 ignores client_storage: 'none'), so they live in an in-memory jar: GA sees
+         working cookies, the browser stores none, and no consent banner is needed. Only on
+         the live domain, so the dev server and the prerender never send hits. -->
+    <script>
+      (function () {
+        if (location.hostname !== "desktopmodeiphone.com") return;
+        try {
+          var nativeCookie = Object.getOwnPropertyDescriptor(Document.prototype, "cookie");
+          var jar = {};
+          Object.defineProperty(document, "cookie", {
+            configurable: true,
+            get: function () {
+              var real = nativeCookie.get.call(document);
+              var mem = Object.keys(jar).map(function (k) { return k + "=" + jar[k]; }).join("; ");
+              return real && mem ? real + "; " + mem : real || mem;
+            },
+            set: function (v) {
+              var m = /^\s*(_ga[^=]*|_gid|_gat[^=]*)=([^;]*)/.exec(v);
+              if (!m) return nativeCookie.set.call(document, v);
+              if (/max-age=0|expires=thu, 01 jan 1970/i.test(v)) delete jar[m[1]];
+              else jar[m[1]] = m[2];
+            }
+          });
+        } catch (e) {}
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag("consent", "default", {
+          analytics_storage: "granted",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          functionality_storage: "denied",
+          personalization_storage: "denied"
+        });
+        gtag("set", "ads_data_redaction", true);
+        gtag("js", new Date());
+        gtag("config", "G-EQ721QEV4M", { allow_google_signals: false, allow_ad_personalization_signals: false });
+        // gtag.js is ~170 KiB and not needed for first paint: load it once the page is idle.
+        // The dataLayer stub above queues every call until it arrives, so nothing is lost.
+        function load() {
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-EQ721QEV4M";
+          document.head.appendChild(s);
+        }
+        function schedule() {
+          if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 3000 });
+          else setTimeout(load, 1500);
+        }
+        if (document.readyState === "complete") schedule();
+        else window.addEventListener("load", schedule, { once: true });
+      })();
+    </script>
+    <link rel="modulepreload" crossorigin href="/assets/index-BbL5VIoX.js" />
+    <script>addEventListener("DOMContentLoaded", function () { requestAnimationFrame(function () { setTimeout(function () { var s = document.createElement("script"); s.type = "module"; s.crossOrigin = ""; s.src = "/assets/index-BbL5VIoX.js"; document.head.appendChild(s); }); }); });</script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DERXr_Jd.css">
+  </head>
+  <body>
+    <div id="root"><header class="sticky top-0 z-50"><div class="mx-auto w-full max-w-6xl px-4 py-3 sm:px-6"><nav class="flex h-fit w-full items-center justify-between gap-4 transition-all duration-500 border-transparent bg-transparent"><a href="/" aria-label="XeOS home"><span class="flex items-center gap-2"><img alt="" width="32" height="32" class="size-8 rounded-icon" src="data:image/webp;base64,UklGRqQDAABXRUJQVlA4IJgDAACQEgCdASpAAEAAPkkei0QioaEZ/M4AKASEtABVR6X+V+G82OuP3vGU61Xqtzif6j/tj72PoQ3kD0AP1m9Mz9mfhg8m7BUzFm/Cth8yry/xP/+RltDAk1KSQKVSep9X5+7mWKcNBRYqU5Hj6LOewLt/9A4zNqFa8Dxwkq1FqZdZQg2fB/3j83iC1JEoJNbtn7BhLPxeu0uacmayrAgAAP7hg7GrKV4Q97esanXNn8D57xmj7qYRx7evkCpIIJ7GUjnj6dr//qEBfgYc5+yTLwP9hg3xcoLIb2qlNzYV7rZrLWPHuyDGH3rpZhvL0PRYHRb9C2C3jofXQ1SZ7tW+yCdk/bJXNsCxZ06L9UtU+PVbQ0Ql5AiP37XZ0PzB9Mz5/HiBi6z7Yvuupn8KLQ8OiUwtEyJiboxITcHFxPbyEMndn+sD3v/ICU5lCPGIMtjfsjI0PIpZciA8E5eNVoecyzUMKFspr/yNP0j6o98uG09/C+/d380Vcn7rh+vMm6G3eu7wgWeSTaTHRm61l9D1JDKlwEUV5P5c0E73vG0WsByWzznoDX/wH7AamhKq8kWX/rX2p2eVW/2R13hTg8guqRjY+nWbKP9XvrUoLSGuUDQ/7TSOo+kvkPxw7SM45uk3M1AE4NF/+dxZEHt03YPD3/5Vzz6A2F+pZGvT4umBXxZKBxDznTe3Txiq0A9m++v/14eoNQc7Z9OHKQYfIWfD+r3AJvOIuLM/T22kwMshislqui+HokIyPDI6W1esjWZBHCGOxHYbteJv6MHCK5Rs5f6ygFD8AjwQh8Vd1UCy5e8dfuJBCDVL9PFG/aQvqZ9TNJqFuZQ0k651/A2UcYG5eFMiivxEUt3/clnGyMRhPIPYi1ibSKoPFHSSTKusoi4HnNxzuljYkLHbaoWBryTn7KVn833tL4LSRqAuLvdIw+aaV7buLF6BHy5jUo+5RKcqFoaqRJ7Zr6bXToD1j+9JQXvQwH1eoyZdH2JgFGjyGQxzDUnZx04wi7q60u0qH5w62ZsnCYQeljPRPhM2R2n30hwFvrXAIQZKPPnxqEnuC3NzUhbum7rBTsQAO4HB1SQstj6Pm0mcC24F+ztHKU3i8R0/s4hTgvX8stbxVxg1grTAxC0BKdVjuvD3E8S8ffapRjKEusuAGraeiJ9dwg0FUWBl5x5mJU+WOrne2DHpN7nTtUcTuhgk2XL2/N1qd0hrU9NmRkIYwKrgAA=="><span class="text-lg font-semibold tracking-tight">XeOS</span></span></a><nav data-slot="navigation-menu" class="group/navigation-menu relative flex max-w-max flex-1 items-center justify-center max-lg:hidden"><ul data-slot="navigation-menu-list" class="group flex-1 list-none items-center justify-center flex gap-0"><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#features" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Features</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#reviews" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Reviews</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#faq" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">FAQ</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/#compare" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Compare</a></li><li data-slot="navigation-menu-item" class="relative"><a data-slot="navigation-menu-link" href="/blog" class="flex items-center gap-2 p-2 outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&amp;_svg:not([class*='size-'])]:size-4 rounded-full px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground">Blog</a></li></ul></nav><div class="flex items-center gap-2"><button type="button" tabindex="0" data-slot="button" aria-label="Switch between light and dark mode" title="Switch between light and dark mode" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50 size-8 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun hidden size-5 dark:block" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon block size-5 dark:hidden" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg></button><a href="https://apps.apple.com/us/app/external-display-browser/id6758286241" target="_blank" rel="noopener" role="button" tabindex="0" data-slot="button" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 rounded-full bg-[#5b3fd9] text-white hover:bg-[#4c33c2] max-sm:hidden"><svg viewBox="0 0 384 512" aria-hidden="true" class="size-4" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg> <!-- -->Download</a><button type="button" tabindex="0" aria-haspopup="menu" aria-expanded="false" id="base-ui-_r_9_" data-slot="dropdown-menu-trigger" class="flex cursor-pointer items-center justify-center rounded-full border border-border bg-background p-2 lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify lucide-align-justify size-5" aria-hidden="true"><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"></path></svg><span class="sr-only">Menu</span></button></div></nav></div></header><main class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12"><div class="flex items-center justify-between gap-4"><a href="/blog" class="flex w-fit items-center gap-2 text-sm text-muted-foreground hover:text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left size-4" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> <!-- -->All articles</a></div><header class="flex max-w-3xl flex-col gap-4"><h1 class="text-4xl font-semibold tracking-tight text-balance md:text-5xl">iOS 26 Desktop Mode: Does the iPhone Have One Yet?</h1><p class="text-xl text-pretty text-muted-foreground">No. iOS 26 did not give the iPhone a desktop mode. Connect it to a monitor and you still get your phone screen, enlarged, between two black bars. Here is what was rumoured, what iOS actually does with an external display today, and how to get a real desktop on the big screen anyway.</p><p class="text-sm text-muted-foreground"><time datetime="2026-10-29">October 29, 2026<!-- --> · </time>3<!-- --> <!-- -->min read</p></header><div class="grid gap-12 lg:grid-cols-[1fr_16rem]"><article data-article="en/ios-26-desktop-mode" class="article-body min-w-0">
+
+  <figure>
+    <img src="/assets/desktop-ipados-SGdiwLj7.webp" alt="A full desktop with windows and a dock on an external display, driven by an iPhone." loading="lazy" decoding="async">
+    <figcaption>A desktop on an external display, without waiting for Apple.</figcaption>
+  </figure>
+
+  <h2 id="what-was-expected">What was expected</h2>
+
+  <p>For a couple of years, reports pointed to a Stage Manager-style mode for USB-C iPhones on an external display: windows, using the whole screen, Apple's answer to Samsung DeX. It became one of the most searched-for iOS features.</p>
+
+  <p>It never arrived. Unfinished code that could be coaxed into showing something like it was found in iOS 26.1, and that path was closed again in the iOS 26.2 betas. Unshipped code means someone was working on it. It doesn't mean you can use it.</p>
+
+  <h2 id="what-each-device-does-today">What each device does today</h2>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Device</th><th>Connected to a monitor, out of the box</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Any iPhone</td><td>Mirrors the phone. A few apps, like video players and Keynote, use the screen themselves.</td></tr>
+        <tr><td>iPad without an M-series chip</td><td>Mirrors the iPad.</td></tr>
+        <tr><td>iPad with an M-series chip</td><td>Stage Manager: an extended desktop with windows.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>So a desktop on an external display is something Apple keeps for its most expensive iPads. Every iPhone mirrors.</p>
+
+  <h2 id="why-mirroring-makes-a-poor-desktop">Why mirroring makes a poor desktop</h2>
+
+  <p>The iPhone screen is tall, about 19.5:9, and monitors are wide, 16:9. Mirroring copies the tall picture onto the wide panel and fills the gap with black, so a large part of the monitor goes unused. What's left is laid out for a phone in your hand, not a screen across the desk: one app at a time, touch only, a mobile browser.</p>
+
+  <h2 id="getting-desktop-mode-now">Getting desktop mode now</h2>
+
+  <p>Instead of waiting, you can run <strong>XeOS</strong>. It doesn't mirror the iPhone. It draws its own desktop for the external display, in landscape and at the display's resolution, and uses the phone as the trackpad. You get:</p>
+
+  <ul>
+    <li>Windows you can move, resize and stack, with a dock to switch between them.</li>
+    <li>A desktop browser with tabs, bookmarks, saved passwords, downloads and a built-in ad blocker.</li>
+    <li>Full-screen video at the display's resolution, without letterboxing.</li>
+    <li>Files with iCloud Drive and USB drives, a PDF editor, and Word, Excel and PowerPoint preview.</li>
+    <li>Websites installed as apps, each in its own window.</li>
+    <li>A Bluetooth mouse and keyboard, the phone as a trackpad, or the iPhone as an Air Mouse.</li>
+  </ul>
+
+  <p>Because XeOS draws everything itself, it doesn't depend on Stage Manager or an M-series chip. Every iPhone that can output video gets it, and so does every iPad, including the ones Apple left out.</p>
+
+  <figure>
+    <img src="/assets/desktop-working-iie8djOm.webp" alt="Several windows open on an external display: a document, a browser and a file manager." loading="lazy" decoding="async">
+    <figcaption>Several apps on screen at once, the way a desktop should work.</figcaption>
+  </figure>
+
+  <h2 id="what-to-know-first">What to know first</h2>
+
+  <p>XeOS is a desktop environment, not iOS on a bigger screen. Your other iPhone apps don't run inside it, because iOS doesn't allow one app to host another. What runs is its own apps, the browser, and any website you install, which covers most of what people do at a computer.</p>
+
+  <p>A few page elements, such as some sign-in boxes, payment fields and cookie banners, are built to resist input that doesn't come from the device's own screen. For those, one button hands the page to your iPhone for a single tap and brings it straight back.</p>
+
+  <h2 id="will-apple-ship-it-later">Will Apple ship it later?</h2>
+
+  <p>Perhaps. iOS 27 added Split View, but only on iPhone Duo and only on its own screens; an iPhone connected to a monitor still mirrors. Whatever Apple ships will probably be limited to recent USB-C hardware and to windows rather than a full desktop. If you have a monitor and an iPhone today, you don't have to wait. For what changed in the next release, see iOS 27 desktop mode.</p>
+
+  <h2 id="questions-people-ask">Questions people ask</h2>
+
+  <div class="faq">
+    <h3>Is there a desktop mode in iOS 26?</h3>
+    <p>No. Unfinished code turned up in iOS 26.1 and was closed off in the 26.2 betas. Nothing shipped.</p>
+
+    <h3>Is there anything like Samsung DeX on iPhone?</h3>
+    <p>Not from Apple. An app that draws its own desktop, like XeOS, is the way to get it. See <a href="/blog/samsung-dex-for-iphone">Samsung DeX for iPhone</a>.</p>
+
+    <h3>Which iPads extend instead of mirroring?</h3>
+    <p>Only iPads with an M-series chip, through Stage Manager. The others mirror, but they can run XeOS.</p>
+
+    <h3>What do I need to connect?</h3>
+    <p>A USB-C to HDMI cable for USB-C iPhones, the Lightning Digital AV Adapter for Lightning models, or AirPlay.</p>
+  </div>
+
+</article><nav data-toc="true" aria-label="On this page" class="max-lg:hidden"><div class="sticky top-28 flex flex-col gap-3 border-l border-border pl-4"><span class="text-sm font-medium">On this page</span><a href="#what-was-expected" class="text-sm text-muted-foreground hover:text-foreground">What was expected</a><a href="#what-each-device-does-today" class="text-sm text-muted-foreground hover:text-foreground">What each device does today</a><a href="#why-mirroring-makes-a-poor-desktop" class="text-sm text-muted-foreground hover:text-foreground">Why mirroring makes a poor desktop</a><a href="#getting-desktop-mode-now" class="text-sm text-muted-foreground hover:text-foreground">Getting desktop mode now</a><a href="#what-to-know-first" class="text-sm text-muted-foreground hover:text-foreground">What to know first</a><a href="#will-apple-ship-it-later" class="text-sm text-muted-foreground hover:text-foreground">Will Apple ship it later?</a><a href="#questions-people-ask" class="text-sm text-muted-foreground hover:text-foreground">Questions people ask</a></div></nav></div><section class="flex flex-col gap-6 border-t border-border pt-10"><h2 class="text-2xl font-semibold tracking-tight">Keep reading</h2><ul class="grid gap-6 sm:grid-cols-3"><li><a href="/blog/samsung-dex-for-iphone" class="group block h-full"><div data-slot="card" data-size="default" class="group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-card py-(--card-spacing) text-sm text-card-foreground ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[&gt;img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl h-full transition group-hover:ring-2 group-hover:ring-primary/40"><img alt="" loading="lazy" class="aspect-video w-full object-cover object-top" src="/assets/duo-dex-alternative-hero-CS_A3OJT.webp"><div data-slot="card-content" class="px-(--card-spacing) font-medium">Samsung DeX for iPhone: What Actually Exists in 2026</div></div></a></li><li><a href="/blog/iphone-external-display-black-bars-fix" class="group block h-full"><div data-slot="card" data-size="default" class="group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-card py-(--card-spacing) text-sm text-card-foreground ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[&gt;img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl h-full transition group-hover:ring-2 group-hover:ring-primary/40"><img alt="" loading="lazy" class="aspect-video w-full object-cover object-top" src="/assets/youtube-fullscreen-tv-BYTrDKA2.webp"><div data-slot="card-content" class="px-(--card-spacing) font-medium">Why Your iPhone Shows Black Bars on a Monitor, and How to Fill the Screen</div></div></a></li><li><a href="/blog/iphone-portable-monitor" class="group block h-full"><div data-slot="card" data-size="default" class="group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-card py-(--card-spacing) text-sm text-card-foreground ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[&gt;img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl h-full transition group-hover:ring-2 group-hover:ring-primary/40"><img alt="" loading="lazy" class="aspect-video w-full object-cover object-top" src="/assets/browser-nasa-DehjFB4S.webp"><div data-slot="card-content" class="px-(--card-spacing) font-medium">iPhone and a Portable Monitor: Cables, Power and a Proper Desktop</div></div></a></li></ul></section></main><footer class="border-t border-border"><div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-14"><div class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"><span class="flex items-center gap-2"><img alt="" width="32" height="32" class="size-8 rounded-icon" src="data:image/webp;base64,UklGRqQDAABXRUJQVlA4IJgDAACQEgCdASpAAEAAPkkei0QioaEZ/M4AKASEtABVR6X+V+G82OuP3vGU61Xqtzif6j/tj72PoQ3kD0AP1m9Mz9mfhg8m7BUzFm/Cth8yry/xP/+RltDAk1KSQKVSep9X5+7mWKcNBRYqU5Hj6LOewLt/9A4zNqFa8Dxwkq1FqZdZQg2fB/3j83iC1JEoJNbtn7BhLPxeu0uacmayrAgAAP7hg7GrKV4Q97esanXNn8D57xmj7qYRx7evkCpIIJ7GUjnj6dr//qEBfgYc5+yTLwP9hg3xcoLIb2qlNzYV7rZrLWPHuyDGH3rpZhvL0PRYHRb9C2C3jofXQ1SZ7tW+yCdk/bJXNsCxZ06L9UtU+PVbQ0Ql5AiP37XZ0PzB9Mz5/HiBi6z7Yvuupn8KLQ8OiUwtEyJiboxITcHFxPbyEMndn+sD3v/ICU5lCPGIMtjfsjI0PIpZciA8E5eNVoecyzUMKFspr/yNP0j6o98uG09/C+/d380Vcn7rh+vMm6G3eu7wgWeSTaTHRm61l9D1JDKlwEUV5P5c0E73vG0WsByWzznoDX/wH7AamhKq8kWX/rX2p2eVW/2R13hTg8guqRjY+nWbKP9XvrUoLSGuUDQ/7TSOo+kvkPxw7SM45uk3M1AE4NF/+dxZEHt03YPD3/5Vzz6A2F+pZGvT4umBXxZKBxDznTe3Txiq0A9m++v/14eoNQc7Z9OHKQYfIWfD+r3AJvOIuLM/T22kwMshislqui+HokIyPDI6W1esjWZBHCGOxHYbteJv6MHCK5Rs5f6ygFD8AjwQh8Vd1UCy5e8dfuJBCDVL9PFG/aQvqZ9TNJqFuZQ0k651/A2UcYG5eFMiivxEUt3/clnGyMRhPIPYi1ibSKoPFHSSTKusoi4HnNxzuljYkLHbaoWBryTn7KVn833tL4LSRqAuLvdIw+aaV7buLF6BHy5jUo+5RKcqFoaqRJ7Zr6bXToD1j+9JQXvQwH1eoyZdH2JgFGjyGQxzDUnZx04wi7q60u0qH5w62ZsnCYQeljPRPhM2R2n30hwFvrXAIQZKPPnxqEnuC3NzUhbum7rBTsQAO4HB1SQstj6Pm0mcC24F+ztHKU3i8R0/s4hTgvX8stbxVxg1grTAxC0BKdVjuvD3E8S8ffapRjKEusuAGraeiJ9dwg0FUWBl5x5mJU+WOrne2DHpN7nTtUcTuhgk2XL2/N1qd0hrU9NmRkIYwKrgAA=="><span class="text-lg font-semibold tracking-tight">XeOS</span></span><nav class="flex flex-wrap items-center gap-x-8 gap-y-3"><a href="/#features" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Features</a><a href="/#reviews" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Reviews</a><a href="/#faq" class="text-sm text-muted-foreground transition-colors hover:text-foreground">FAQ</a><a href="/blog" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Blog</a><a href="/privacy" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Privacy</a><a href="/terms" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Terms</a><a href="/contact" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Contact</a></nav></div><div data-orientation="horizontal" role="separator" aria-orientation="horizontal" data-slot="separator" class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"></div><p class="text-sm text-muted-foreground">© 2026 XeOS. All rights reserved.</p></div></footer></div>
+  </body>
+</html>
