@@ -1,4 +1,4 @@
-import{i as n,a as t,b as i}from"./spotlight-search-hdQ6mT9d.js";const e=`
+import{i as n}from"./duo-dex-alternative-hero-DTTDygSB.js";import{i as t,a as i}from"./spotlight-search-B4Rdewmh.js";const d=`
 
   <figure>
     <img src="`+n+`" alt="モニターにつないだiPhone。モニターにはウインドウとDockのあるデスクトップが表示されている。" loading="lazy" decoding="async">
@@ -84,4 +84,4 @@ import{i as n,a as t,b as i}from"./spotlight-search-hdQ6mT9d.js";const e=`
     <p>使えます。モニター、テレビ、プロジェクター、モバイルモニター、さらにXREALやVITUREのようなARグラスにも対応しています。</p>
   </div>
 
-`,d=[{id:"結論から",text:"結論から"},{id:"iosがミラーリングしかしない理由",text:"iOSがミラーリングしかしない理由"},{id:"dexとxeosの比較",text:"DeXとXeOSの比較"},{id:"xeosのある一日",text:"XeOSのある一日"},{id:"5分で設定",text:"5分で設定"},{id:"よくある質問",text:"よくある質問"}];export{e as html,d as toc};
+`,r=[{id:"結論から",text:"結論から"},{id:"iosがミラーリングしかしない理由",text:"iOSがミラーリングしかしない理由"},{id:"dexとxeosの比較",text:"DeXとXeOSの比較"},{id:"xeosのある一日",text:"XeOSのある一日"},{id:"5分で設定",text:"5分で設定"},{id:"よくある質問",text:"よくある質問"}];export{d as html,r as toc};

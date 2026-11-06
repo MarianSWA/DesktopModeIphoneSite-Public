@@ -1,4 +1,4 @@
-import{i as e,a as n,b as t}from"./spotlight-search-hdQ6mT9d.js";const i=`
+import{i as e}from"./duo-dex-alternative-hero-DTTDygSB.js";import{i as n,a as t}from"./spotlight-search-B4Rdewmh.js";const a=`
 
   <figure>
     <img src="`+e+`" alt="An iPhone connected to a monitor showing a desktop with windows and a dock." loading="lazy" decoding="async">
@@ -84,4 +84,4 @@ import{i as e,a as n,b as t}from"./spotlight-search-hdQ6mT9d.js";const i=`
     <p>Yes: monitors, TVs, projectors, portable displays and even AR glasses like XREAL and VITURE.</p>
   </div>
 
-`,a=[{id:"the-short-answer",text:"The short answer"},{id:"why-ios-mirrors-instead",text:"Why iOS mirrors instead"},{id:"dex-and-xeos-feature-by-feature",text:"DeX and XeOS, feature by feature"},{id:"what-a-day-with-it-looks-like",text:"What a day with it looks like"},{id:"setting-it-up-in-five-minutes",text:"Setting it up in five minutes"},{id:"questions-people-ask",text:"Questions people ask"}];export{i as html,a as toc};
+`,s=[{id:"the-short-answer",text:"The short answer"},{id:"why-ios-mirrors-instead",text:"Why iOS mirrors instead"},{id:"dex-and-xeos-feature-by-feature",text:"DeX and XeOS, feature by feature"},{id:"what-a-day-with-it-looks-like",text:"What a day with it looks like"},{id:"setting-it-up-in-five-minutes",text:"Setting it up in five minutes"},{id:"questions-people-ask",text:"Questions people ask"}];export{a as html,s as toc};

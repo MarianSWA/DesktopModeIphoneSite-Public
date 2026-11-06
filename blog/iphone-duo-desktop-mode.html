@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone Duo and Desktop Mode: Split View Isn't It | XeOS</title>
+    <meta name="description" content="Apple's first foldable iPhone can finally show two apps at once, so it's natural to ask whether it also turns into a computer when you connect a monitor. It doesn't. The iPhone Duo mirrors to an external display just like every iPhone before it. Here is where Apple drew the line, and how to give the Duo a real desktop mode across two screens anyway." />
+    <link rel="canonical" href="https://desktopmodeiphone.com/blog/iphone-duo-desktop-mode" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="XeOS" />
+    <meta property="og:url" content="https://desktopmodeiphone.com/blog/iphone-duo-desktop-mode" />
+    <meta property="og:title" content="iPhone Duo and Desktop Mode: Split View Isn't It | XeOS" />
+    <meta property="og:description" content="Apple's first foldable iPhone can finally show two apps at once, so it's natural to ask whether it also turns into a computer when you connect a monitor. It doesn't. The iPhone Duo mirrors to an external display just like every iPhone before it. Here is where Apple drew the line, and how to give the Duo a real desktop mode across two screens anyway." />
+    <meta property="og:image" content="https://desktopmodeiphone.com/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-itunes-app" content="app-id=6758286241" />
+    <!-- Apply a theme the visitor picked before the first paint, so there is no flash.
+         No saved choice: the system appearance applies through CSS. -->
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <!-- Cookieless Google Analytics, as on externaldisplayiphone.com: GA always measures but
+         never stores anything on the device. gtag stops sending when its _ga cookies don't
+         stick (GA4 ignores client_storage: 'none'), so they live in an in-memory jar: GA sees
+         working cookies, the browser stores none, and no consent banner is needed. Only on
+         the live domain, so the dev server and the prerender never send hits. -->
+    <script>
+      (function () {
+        if (location.hostname !== "desktopmodeiphone.com") return;
+        try {
+          var nativeCookie = Object.getOwnPropertyDescriptor(Document.prototype, "cookie");
+          var jar = {};
+          Object.defineProperty(document, "cookie", {
+            configurable: true,
+            get: function () {
+              var real = nativeCookie.get.call(document);
+              var mem = Object.keys(jar).map(function (k) { return k + "=" + jar[k]; }).join("; ");
+              return real && mem ? real + "; " + mem : real || mem;
+            },
+            set: function (v) {
+              var m = /^\s*(_ga[^=]*|_gid|_gat[^=]*)=([^;]*)/.exec(v);
+              if (!m) return nativeCookie.set.call(document, v);
+              if (/max-age=0|expires=thu, 01 jan 1970/i.test(v)) delete jar[m[1]];
+              else jar[m[1]] = m[2];
+            }
+          });
+        } catch (e) {}
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag("consent", "default", {
+          analytics_storage: "granted",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          functionality_storage: "denied",
+          personalization_storage: "denied"
+        });
+        gtag("set", "ads_data_redaction", true);
+        gtag("js", new Date());
+        gtag("config", "G-EQ721QEV4M", { allow_google_signals: false, allow_ad_personalization_signals: false });
+        // gtag.js is ~170 KiB and not needed for first paint: load it once the page is idle.
+        // The dataLayer stub above queues every call until it arrives, so nothing is lost.
+        function load() {
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-EQ721QEV4M";
+          document.head.appendChild(s);
+        }
+        function schedule() {
+          if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 3000 });
+          else setTimeout(load, 1500);
+        }
+        if (document.readyState === "complete") schedule();
+        else window.addEventListener("load", schedule, { once: true });
+      })();
+    </script>
+    <link rel="modulepreload" crossorigin href="/assets/index-D_jD-7kf.js" />
+    <script>addEventListener("DOMContentLoaded", function () { requestAnimationFrame(function () { setTimeout(function () { var s = document.createElement("script"); s.type = "module"; s.crossOrigin = ""; s.src = "/assets/index-D_jD-7kf.js"; document.head.appendChild(s); }); }); });</script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DERXr_Jd.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

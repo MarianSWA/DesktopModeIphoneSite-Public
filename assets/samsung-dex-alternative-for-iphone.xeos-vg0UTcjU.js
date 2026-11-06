@@ -1,4 +1,4 @@
-import{i as e,a as n,b as i}from"./spotlight-search-hdQ6mT9d.js";const a=`
+import{i as e}from"./duo-dex-alternative-hero-DTTDygSB.js";import{i as n,a as i}from"./spotlight-search-B4Rdewmh.js";const r=`
 
   <figure>
     <img src="`+e+`" alt="Ein iPhone an einem Monitor, der einen Desktop mit Fenstern und einem Dock zeigt." loading="lazy" decoding="async">
@@ -84,4 +84,4 @@ import{i as e,a as n,b as i}from"./spotlight-search-hdQ6mT9d.js";const a=`
     <p>Ja: Monitore, Fernseher, Beamer, tragbare Bildschirme und sogar AR-Brillen wie XREAL und VITURE.</p>
   </div>
 
-`,r=[{id:"die-kurze-antwort",text:"Die kurze Antwort"},{id:"warum-ios-stattdessen-spiegelt",text:"Warum iOS stattdessen spiegelt"},{id:"dex-und-xeos-im-vergleich",text:"DeX und XeOS im Vergleich"},{id:"wie-ein-tag-damit-aussieht",text:"Wie ein Tag damit aussieht"},{id:"in-fünf-minuten-eingerichtet",text:"In fünf Minuten eingerichtet"},{id:"häufige-fragen",text:"Häufige Fragen"}];export{a as html,r as toc};
+`,s=[{id:"die-kurze-antwort",text:"Die kurze Antwort"},{id:"warum-ios-stattdessen-spiegelt",text:"Warum iOS stattdessen spiegelt"},{id:"dex-und-xeos-im-vergleich",text:"DeX und XeOS im Vergleich"},{id:"wie-ein-tag-damit-aussieht",text:"Wie ein Tag damit aussieht"},{id:"in-fünf-minuten-eingerichtet",text:"In fünf Minuten eingerichtet"},{id:"häufige-fragen",text:"Häufige Fragen"}];export{r as html,s as toc};

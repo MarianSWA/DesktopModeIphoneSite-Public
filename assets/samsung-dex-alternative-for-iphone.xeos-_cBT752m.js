@@ -1,4 +1,4 @@
-import{i as e,a as n,b as t}from"./spotlight-search-hdQ6mT9d.js";const s=`
+import{i as e}from"./duo-dex-alternative-hero-DTTDygSB.js";import{i as n,a as t}from"./spotlight-search-B4Rdewmh.js";const i=`
 
   <figure>
     <img src="`+e+`" alt="Un iPhone branché à un écran qui affiche un bureau avec des fenêtres et un dock." loading="lazy" decoding="async">
@@ -84,4 +84,4 @@ import{i as e,a as n,b as t}from"./spotlight-search-hdQ6mT9d.js";const s=`
     <p>Oui : écrans, téléviseurs, vidéoprojecteurs, écrans portables et même lunettes AR comme XREAL et VITURE.</p>
   </div>
 
-`,i=[{id:"la-réponse-courte",text:"La réponse courte"},{id:"pourquoi-ios-recopie-l-écran",text:"Pourquoi iOS recopie l'écran"},{id:"dex-et-xeos-point-par-point",text:"DeX et XeOS, point par point"},{id:"à-quoi-ressemble-une-journée-avec",text:"À quoi ressemble une journée avec"},{id:"prêt-en-cinq-minutes",text:"Prêt en cinq minutes"},{id:"questions-fréquentes",text:"Questions fréquentes"}];export{s as html,i as toc};
+`,u=[{id:"la-réponse-courte",text:"La réponse courte"},{id:"pourquoi-ios-recopie-l-écran",text:"Pourquoi iOS recopie l'écran"},{id:"dex-et-xeos-point-par-point",text:"DeX et XeOS, point par point"},{id:"à-quoi-ressemble-une-journée-avec",text:"À quoi ressemble une journée avec"},{id:"prêt-en-cinq-minutes",text:"Prêt en cinq minutes"},{id:"questions-fréquentes",text:"Questions fréquentes"}];export{i as html,u as toc};

@@ -1,4 +1,4 @@
-import{i as n,a as t,b as i}from"./spotlight-search-hdQ6mT9d.js";const o=`
+import{i as n}from"./duo-dex-alternative-hero-DTTDygSB.js";import{i as t,a as i}from"./spotlight-search-B4Rdewmh.js";const p=`
 
   <figure>
     <img src="`+n+`" alt="一部连接显示器的 iPhone，显示器上是带有窗口和程序坞的桌面。" loading="lazy" decoding="async">
@@ -84,4 +84,4 @@ import{i as n,a as t,b as i}from"./spotlight-search-hdQ6mT9d.js";const o=`
     <p>可以：显示器、电视、投影仪、便携显示器，甚至 XREAL、VITURE 这类 AR 眼镜都支持。</p>
   </div>
 
-`,p=[{id:"简短回答",text:"简短回答"},{id:"为什么-ios-只会镜像",text:"为什么 iOS 只会镜像"},{id:"dex-与-xeos-逐项对比",text:"DeX 与 XeOS 逐项对比"},{id:"用它度过的一天",text:"用它度过的一天"},{id:"五分钟完成设置",text:"五分钟完成设置"},{id:"常见问题",text:"常见问题"}];export{o as html,p as toc};
+`,e=[{id:"简短回答",text:"简短回答"},{id:"为什么-ios-只会镜像",text:"为什么 iOS 只会镜像"},{id:"dex-与-xeos-逐项对比",text:"DeX 与 XeOS 逐项对比"},{id:"用它度过的一天",text:"用它度过的一天"},{id:"五分钟完成设置",text:"五分钟完成设置"},{id:"常见问题",text:"常见问题"}];export{p as html,e as toc};

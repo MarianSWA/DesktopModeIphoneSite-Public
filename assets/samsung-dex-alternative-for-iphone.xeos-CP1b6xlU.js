@@ -1,4 +1,4 @@
-import{i as e,a,b as n}from"./spotlight-search-hdQ6mT9d.js";const t=`
+import{i as e}from"./duo-dex-alternative-hero-DTTDygSB.js";import{i as a,a as n}from"./spotlight-search-B4Rdewmh.js";const i=`
 
   <figure>
     <img src="`+e+`" alt="Un iPhone conectado a un monitor que muestra un escritorio con ventanas y un dock." loading="lazy" decoding="async">
@@ -84,4 +84,4 @@ import{i as e,a,b as n}from"./spotlight-search-hdQ6mT9d.js";const t=`
     <p>Sí: monitores, televisores, proyectores, pantallas portátiles e incluso gafas AR como XREAL y VITURE.</p>
   </div>
 
-`,i=[{id:"la-respuesta-corta",text:"La respuesta corta"},{id:"por-qué-ios-duplica-la-pantalla",text:"Por qué iOS duplica la pantalla"},{id:"dex-y-xeos-punto-por-punto",text:"DeX y XeOS, punto por punto"},{id:"cómo-es-un-día-con-él",text:"Cómo es un día con él"},{id:"configurado-en-cinco-minutos",text:"Configurado en cinco minutos"},{id:"preguntas-frecuentes",text:"Preguntas frecuentes"}];export{t as html,i as toc};
+`,s=[{id:"la-respuesta-corta",text:"La respuesta corta"},{id:"por-qué-ios-duplica-la-pantalla",text:"Por qué iOS duplica la pantalla"},{id:"dex-y-xeos-punto-por-punto",text:"DeX y XeOS, punto por punto"},{id:"cómo-es-un-día-con-él",text:"Cómo es un día con él"},{id:"configurado-en-cinco-minutos",text:"Configurado en cinco minutos"},{id:"preguntas-frecuentes",text:"Preguntas frecuentes"}];export{i as html,s as toc};

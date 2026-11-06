@@ -1,4 +1,4 @@
-import{i as n,a as t,b as i}from"./spotlight-search-hdQ6mT9d.js";const o=`
+import{i as n}from"./duo-dex-alternative-hero-DTTDygSB.js";import{i as t,a as i}from"./spotlight-search-B4Rdewmh.js";const r=`
 
   <figure>
     <img src="`+n+`" alt="모니터에 연결된 아이폰. 모니터에는 창과 독이 있는 데스크톱이 표시되어 있다." loading="lazy" decoding="async">
@@ -84,4 +84,4 @@ import{i as n,a as t,b as i}from"./spotlight-search-hdQ6mT9d.js";const o=`
     <p>네. 모니터, TV, 프로젝터, 휴대용 모니터, 그리고 XREAL이나 VITURE 같은 AR 글래스까지 지원합니다.</p>
   </div>
 
-`,r=[{id:"짧은-답",text:"짧은 답"},{id:"ios가-미러링만-하는-이유",text:"iOS가 미러링만 하는 이유"},{id:"덱스와-xeos-비교",text:"덱스와 XeOS 비교"},{id:"xeos와-함께하는-하루",text:"XeOS와 함께하는 하루"},{id:"5분이면-설정-끝",text:"5분이면 설정 끝"},{id:"자주-묻는-질문",text:"자주 묻는 질문"}];export{o as html,r as toc};
+`,l=[{id:"짧은-답",text:"짧은 답"},{id:"ios가-미러링만-하는-이유",text:"iOS가 미러링만 하는 이유"},{id:"덱스와-xeos-비교",text:"덱스와 XeOS 비교"},{id:"xeos와-함께하는-하루",text:"XeOS와 함께하는 하루"},{id:"5분이면-설정-끝",text:"5분이면 설정 끝"},{id:"자주-묻는-질문",text:"자주 묻는 질문"}];export{r as html,l as toc};
